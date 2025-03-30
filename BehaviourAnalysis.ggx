@@ -1,0 +1,3646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document version="1.0">
+    <GraphTransformationSystem ID="I1" directed="true"
+        name="BehaviourAnalysis" parallel="true">
+        <TaggedValue Tag="AttrHandler" TagValue="Java Expr">
+            <TaggedValue Tag="Package" TagValue="java.lang"/>
+            <TaggedValue Tag="Package" TagValue="java.util"/>
+        </TaggedValue>
+        <TaggedValue Tag="CSP" TagValue="true"/>
+        <TaggedValue Tag="injective" TagValue="true"/>
+        <TaggedValue Tag="dangling" TagValue="true"/>
+        <TaggedValue Tag="identification" TagValue="true"/>
+        <TaggedValue Tag="NACs" TagValue="true"/>
+        <TaggedValue Tag="PACs" TagValue="true"/>
+        <TaggedValue Tag="GACs" TagValue="true"/>
+        <TaggedValue Tag="ruleSequence" TagValue="true"/>
+        <TaggedValue Tag="breakAllLayer" TagValue="true"/>
+        <TaggedValue Tag="showGraphAfterStep" TagValue="true"/>
+        <TaggedValue Tag="TypeGraphLevel" TagValue="DISABLED"/>
+        <Types>
+            <NodeType ID="I2" abstract="false" name="Behaviour%:RECT:java.awt.Color[r=0,g=0,b=0]:[NODE]:">
+                <AttrType ID="I4" attrname="Type" typename="String" visible="true"/>
+                <AttrType ID="I5" attrname="Name" typename="String" visible="true"/>
+            </NodeType>
+            <NodeType ID="I6" abstract="false" name="File%:ROUNDRECT:java.awt.Color[r=0,g=0,b=255]:[NODE]:"/>
+            <NodeType ID="I7" abstract="false" name="MetaBehaviour%:OVAL:java.awt.Color[r=255,g=0,b=0]:[NODE]:">
+                <AttrType ID="I9" attrname="Type" typename="String" visible="true"/>
+                <Layout type="I14">
+                    <LayoutPattern ID="I1211" kind="y" name="ver_tree"
+                        patterntype="edge" value="1"/>
+                </Layout>
+            </NodeType>
+            <NodeType ID="I10" abstract="false" name="Information%:ROUNDRECT:java.awt.Color[r=0,g=153,b=51]:[NODE]:">
+                <AttrType ID="I12" attrname="Type" typename="String" visible="true"/>
+                <AttrType ID="I13" attrname="Value" typename="String" visible="true"/>
+            </NodeType>
+            <EdgeType ID="I14" abstract="false" name="R%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:">
+                <AttrType ID="I16" attrname="Confidence"
+                    typename="float" visible="true"/>
+            </EdgeType>
+            <EdgeType ID="I17" abstract="false" name="Data%:SOLID_LINE:java.awt.Color[r=255,g=0,b=0]:BOLD:[EDGE]:"/>
+            <EdgeType ID="I18" abstract="false" name="Source%:DOT_LINE:java.awt.Color[r=0,g=0,b=255]:[EDGE]:"/>
+            <EdgeType ID="I19" abstract="false"
+                comment="For the behaviour that's responsible for a meta-behaviour" name="MetaCreator%:DASH_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+        </Types>
+        <Graph ID="I20" kind="HOST" name="example_tar">
+            <Node ID="I21" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>tar</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="396" Y="163"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I25" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>CMD_EXEC</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="225" Y="259"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I28" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>CMD_EXEC</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="952" Y="260"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I31" type="I10">
+                <Attribute constant="true" type="I12">
+                    <Value>
+                        <string>LFILE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="955" Y="346"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I34" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>tar</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="816" Y="168"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I38" type="I10">
+                <Attribute constant="true" type="I12">
+                    <Value>
+                        <string>LFILE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="218" Y="388"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I41" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>FILE_WRITE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="553" Y="263"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I44" type="I6">
+                <NodeLayout X="617" Y="475"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I45" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>FILE_READ</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="680" Y="261"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I48" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>FILE_READ</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="433" Y="263"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I51" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>FILE_WRITE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="816" Y="261"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I54" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>bash</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="614" Y="44"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I58" type="I6">
+                <NodeLayout X="595" Y="134"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I59" type="I6">
+                <NodeLayout X="617" Y="185"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I60" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>/usr/bin/ssh</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="80" Y="251"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I64" type="I6">
+                <NodeLayout X="616" Y="391"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I65" type="I10">
+                <Attribute constant="true" type="I12">
+                    <Value>
+                        <string>RFILE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="329" Y="262"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I68" type="I6">
+                <NodeLayout X="85" Y="380"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I69" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>/forbiddenr</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="1087" Y="265"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Edge ID="I73" source="I21" target="I25" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I75" source="I28" target="I31" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I77" source="I34" target="I28" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I79" source="I25" target="I38" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I81" source="I41" target="I44" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I83" source="I34" target="I45" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I85" source="I21" target="I41" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I87" source="I21" target="I48" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I89" source="I34" target="I51" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I91" source="I54" target="I21" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I93" source="I54" target="I34" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I95" source="I54" target="I58" type="I18">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I96" source="I34" target="I59" type="I18">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I97" source="I21" target="I59" type="I18">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I98" source="I21" target="I60" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I100" source="I45" target="I64" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I102" source="I41" target="I64" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I104" source="I21" target="I65" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I106" source="I60" target="I68" type="I18">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I107" source="I69" target="I44" type="I18">
+                <EdgeLayout bendX="1081" bendY="442" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I108" source="I34" target="I69" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+        </Graph>
+        <Graph ID="I110" kind="HOST" name="example_wget_python3">
+            <Node ID="I111" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>wget</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="333" Y="221"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I115" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>CMD_EXEC</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="783" Y="319"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I118" type="I10">
+                <Attribute constant="true" type="I12">
+                    <Value>
+                        <string>LFILE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="915" Y="323"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I121" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>python3</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="756" Y="225"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I125" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>FILE_READ</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="620" Y="318"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I128" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>FILE_WRITE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="493" Y="320"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I131" type="I10">
+                <Attribute constant="true" type="I12">
+                    <Value>
+                        <string>URL</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="111" Y="327"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I134" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>NET_COMS</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="215" Y="328"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I137" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>bash</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="540" Y="86"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I141" type="I6">
+                <NodeLayout X="544" Y="205"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I142" type="I6">
+                <NodeLayout X="196" Y="219"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I143" type="I6">
+                <NodeLayout X="555" Y="437"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I144" type="I6">
+                <NodeLayout X="917" Y="237"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I145" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>FILE_WRITE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="350" Y="328"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Edge ID="I148" source="I121" target="I115" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I150" source="I121" target="I125" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I152" source="I111" target="I128" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I154" source="I111" target="I131" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I156" source="I111" target="I134" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I158" source="I137" target="I111" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I160" source="I137" target="I121" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I162" source="I137" target="I141" type="I18">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I163" source="I111" target="I142" type="I18">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I164" source="I128" target="I143" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I166" source="I125" target="I143" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I168" source="I121" target="I144" type="I18">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I169" source="I111" target="I145" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I171" source="I121" target="I118" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+        </Graph>
+        <Graph ID="I173" kind="HOST" name="example_curl_chmod_exec">
+            <Node ID="I174" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>bash</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="532" Y="140"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I178" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>curl</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="283" Y="271"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I182" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>chmod</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="754" Y="283"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I186" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>FS_OP</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="626" Y="363"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I189" type="I10">
+                <Attribute constant="true" type="I12">
+                    <Value>
+                        <string>LFILE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="889" Y="365"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I192" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>FILE_WRITE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="464" Y="356"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I195" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>NET_COMS</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="208" Y="357"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I198" type="I10">
+                <Attribute constant="true" type="I12">
+                    <Value>
+                        <string>URL</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="89" Y="359"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I201" type="I6">
+                <NodeLayout X="632" Y="594"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I202" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>FILE_WRITE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="330" Y="359"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I205" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>downloaded_program</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="1144" Y="361"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I209" type="I6">
+                <NodeLayout X="526" Y="247"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I210" type="I6">
+                <NodeLayout X="145" Y="264"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I211" type="I6">
+                <NodeLayout X="639" Y="290"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Edge ID="I212" source="I174" target="I178" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I214" source="I174" target="I182" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I216" source="I182" target="I186" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I218" source="I182" target="I189" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I220" source="I178" target="I192" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I222" source="I178" target="I195" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I224" source="I192" target="I201" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I226" source="I186" target="I201" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I228" source="I178" target="I202" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I230" source="I174" target="I205" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I232" source="I174" target="I209" type="I18">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I233" source="I178" target="I210" type="I18">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I234" source="I182" target="I211" type="I18">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I235" source="I205" target="I201" type="I18">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I236" source="I178" target="I198" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+        </Graph>
+        <Graph ID="I238" kind="HOST" name="example_tar_bash">
+            <Node ID="I239" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>tar</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="361" Y="212"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I243" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>CMD_EXEC</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="190" Y="308"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I246" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>CMD_EXEC</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="917" Y="309"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I249" type="I10">
+                <Attribute constant="true" type="I12">
+                    <Value>
+                        <string>LFILE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="920" Y="395"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I252" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>bash</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="781" Y="217"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I256" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>FILE_WRITE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="518" Y="312"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I259" type="I6">
+                <NodeLayout X="581" Y="533"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I260" type="I10">
+                <Attribute constant="true" type="I12">
+                    <Value>
+                        <string>LFILE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="196" Y="412"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I263" type="I6">
+                <NodeLayout X="582" Y="434"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I264" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>FILE_READ</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="645" Y="310"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I267" type="I10">
+                <Attribute constant="true" type="I12">
+                    <Value>
+                        <string>RFILE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="294" Y="311"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I270" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>FILE_READ</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="398" Y="312"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I273" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>bash</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="565" Y="78"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I277" type="I6">
+                <NodeLayout X="569" Y="197"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I278" type="I6">
+                <NodeLayout X="221" Y="211"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I279" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>/usr/bin/ssh</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="64" Y="304"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I283" type="I6">
+                <NodeLayout X="67" Y="431"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Edge ID="I284" source="I239" target="I243" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I286" source="I246" target="I249" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I288" source="I252" target="I246" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I290" source="I256" target="I259" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I292" source="I243" target="I260" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I294" source="I256" target="I263" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I296" source="I252" target="I264" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I298" source="I239" target="I256" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I300" source="I239" target="I267" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I302" source="I239" target="I270" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I304" source="I264" target="I259" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I306" source="I273" target="I239" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I308" source="I273" target="I252" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I310" source="I273" target="I277" type="I18">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I311" source="I252" target="I277" type="I18">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I312" source="I239" target="I278" type="I18">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I313" source="I279" target="I283" type="I18">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I314" source="I239" target="I279" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+        </Graph>
+        <Graph ID="I316" kind="HOST" name="example_tar_script">
+            <Node ID="I317" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>tar</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="444" Y="194"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I321" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>CMD_EXEC</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="273" Y="290"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I324" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>CMD_EXEC</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="1000" Y="291"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I327" type="I10">
+                <Attribute constant="true" type="I12">
+                    <Value>
+                        <string>LFILE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="1003" Y="377"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I330" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>tar</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="864" Y="199"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I334" type="I10">
+                <Attribute constant="true" type="I12">
+                    <Value>
+                        <string>LFILE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="266" Y="419"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I337" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>FILE_WRITE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="601" Y="294"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I340" type="I6">
+                <NodeLayout X="665" Y="506"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I341" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>FILE_READ</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="728" Y="292"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I344" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>FILE_READ</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="481" Y="294"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I347" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>FILE_WRITE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="864" Y="292"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I350" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>bash</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="662" Y="75"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I354" type="I6">
+                <NodeLayout X="643" Y="165"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I355" type="I6">
+                <NodeLayout X="665" Y="216"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I356" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>bash</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="1191" Y="283"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I360" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>Process</string>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I5">
+                    <Value>
+                        <string>/usr/bin/ssh</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="128" Y="282"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I364" type="I6">
+                <NodeLayout X="664" Y="422"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I365" type="I10">
+                <Attribute constant="true" type="I12">
+                    <Value>
+                        <string>RFILE</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="377" Y="293"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I368" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>CMD_EXEC</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="1172" Y="347"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I371" type="I2">
+                <Attribute constant="true" type="I4">
+                    <Value>
+                        <string>FILE_READ</string>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="1134" Y="415"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Node ID="I374" type="I6">
+                <NodeLayout X="132" Y="411"/>
+                <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+            </Node>
+            <Edge ID="I375" source="I317" target="I321" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I377" source="I324" target="I327" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I379" source="I330" target="I324" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I381" source="I321" target="I334" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I383" source="I337" target="I340" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I385" source="I330" target="I341" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I387" source="I317" target="I337" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I389" source="I317" target="I344" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I391" source="I330" target="I347" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I393" source="I350" target="I317" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I395" source="I350" target="I330" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I397" source="I350" target="I354" type="I18">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I398" source="I330" target="I355" type="I18">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I399" source="I317" target="I355" type="I18">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I400" source="I317" target="I360" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I402" source="I330" target="I356" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I404" source="I341" target="I364" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I406" source="I337" target="I364" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I408" source="I317" target="I365" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I410" source="I356" target="I354" type="I18">
+                <EdgeLayout bendX="1039" bendY="90" textOffsetX="56" textOffsetY="-81"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I411" source="I356" target="I368" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I413" source="I368" target="I371" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I415" source="I371" target="I340" type="I14">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+            <Edge ID="I417" source="I360" target="I374" type="I18">
+                <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                <additionalLayout aktlength="200" force="10" preflength="200"/>
+            </Edge>
+        </Graph>
+        <Rule ID="I418" formula="true" name="Neutral0">
+            <Graph ID="I420" kind="LHS" name="LeftOf_Neutral0">
+                <Node ID="I421" type="I2">
+                    <NodeLayout X="93" Y="43"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I423" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>NEUTRAL</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="200" Y="109"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I426" type="I2">
+                    <NodeLayout X="310" Y="163"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I428" source="I421" target="I423" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I430" source="I423" target="I426" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I432" kind="RHS" name="RightOf_Neutral0">
+                <Node ID="I433" type="I2">
+                    <NodeLayout X="134" Y="90"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I435" type="I2">
+                    <NodeLayout X="252" Y="138"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I437" source="I433" target="I435" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="Neutral0">
+                <Mapping image="I433" orig="I421"/>
+                <Mapping image="I435" orig="I426"/>
+            </Morphism>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I439" formula="true" name="Neutral1">
+            <Graph ID="I441" kind="LHS" name="LeftOf_Neutral1">
+                <Node ID="I442" type="I2">
+                    <NodeLayout X="93" Y="43"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I444" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>NEUTRAL</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="188" Y="88"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I447" source="I442" target="I444" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I449" kind="RHS" name="RightOf_Neutral1">
+                <Node ID="I450" type="I2">
+                    <NodeLayout X="93" Y="43"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+            </Graph>
+            <Morphism comment="Formula: true" name="Neutral1">
+                <Mapping image="I450" orig="I442"/>
+            </Morphism>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I452" formula="true" name="CopySimplifier">
+            <Graph ID="I454" kind="LHS" name="LeftOf_CopySimplifier">
+                <Node ID="I455" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>COPY</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="274" Y="102"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I458" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_READ</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="202" Y="159"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I461" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_WRITE</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="358" Y="170"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I464" type="I6">
+                    <NodeLayout X="155" Y="212"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I465" type="I6">
+                    <NodeLayout X="386" Y="228"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I466" type="I2">
+                    <NodeLayout X="276" Y="32"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I468" source="I458" target="I464" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I470" source="I455" target="I458" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I472" source="I455" target="I461" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I474" source="I461" target="I465" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I476" source="I466" target="I455" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I478" kind="RHS" name="RightOf_CopySimplifier">
+                <Node ID="I479" type="I6">
+                    <NodeLayout X="286" Y="187"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+            </Graph>
+            <Morphism comment="Formula: true" name="CopySimplifier">
+                <Mapping image="I479" orig="I465"/>
+                <Mapping image="I479" orig="I464"/>
+            </Morphism>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I480" formula="true" name="InferNETCFG_For_RFILE">
+            <Graph ID="I482" kind="LHS" name="LeftOf_InferNETCFG_For_RFILE">
+                <Node ID="I483" type="I10">
+                    <Attribute constant="true" type="I12">
+                        <Value>
+                            <string>RFILE</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="105" Y="158"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I486" type="I2">
+                    <NodeLayout X="105" Y="79"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I488" source="I486" target="I483" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I490" kind="RHS" name="RightOf_InferNETCFG_For_RFILE">
+                <Node ID="I491" type="I2">
+                    <NodeLayout X="172" Y="42"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I493" type="I10">
+                    <Attribute constant="true" type="I12">
+                        <Value>
+                            <string>RFILE</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="277" Y="204"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I496" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>NET_CFG</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="145" Y="120"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I499" source="I491" target="I496" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I501" source="I496" target="I493" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="InferNETCFG_For_RFILE">
+                <Mapping image="I493" orig="I483"/>
+                <Mapping image="I491" orig="I486"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I503" kind="NAC" name="Nac">
+                        <Node ID="I504" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>NET_CFG</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="160" Y="95"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                    </Graph>
+                    <Morphism name="Nac">
+                        <Mapping image="I504" orig="I486"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I507" formula="true" name="InferNETCFG_For_URL">
+            <Graph ID="I509" kind="LHS" name="LeftOf_InferNETCFG_For_URL">
+                <Node ID="I510" type="I10">
+                    <Attribute constant="true" type="I12">
+                        <Value>
+                            <string>URL</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="105" Y="158"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I513" type="I2">
+                    <NodeLayout X="105" Y="79"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I515" source="I513" target="I510" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I517" kind="RHS" name="RightOf_InferNETCFG_For_URL">
+                <Node ID="I518" type="I2">
+                    <NodeLayout X="172" Y="42"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I520" type="I10">
+                    <Attribute constant="true" type="I12">
+                        <Value>
+                            <string>URL</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="277" Y="204"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I523" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>NET_CFG</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="145" Y="120"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I526" source="I518" target="I523" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I528" source="I523" target="I520" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="InferNETCFG_For_URL">
+                <Mapping image="I520" orig="I510"/>
+                <Mapping image="I518" orig="I513"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I530" kind="NAC" name="Nac">
+                        <Node ID="I531" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>NET_CFG</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="160" Y="95"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                    </Graph>
+                    <Morphism name="Nac">
+                        <Mapping image="I531" orig="I513"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I534" formula="true" name="InferNETCFG_For_IP">
+            <Graph ID="I536" kind="LHS" name="LeftOf_InferNETCFG_For_IP">
+                <Node ID="I537" type="I10">
+                    <Attribute constant="true" type="I12">
+                        <Value>
+                            <string>IP</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="105" Y="158"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I540" type="I2">
+                    <NodeLayout X="105" Y="79"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I542" source="I540" target="I537" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I544" kind="RHS" name="RightOf_InferNETCFG_For_IP">
+                <Node ID="I545" type="I2">
+                    <NodeLayout X="172" Y="42"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I547" type="I10">
+                    <Attribute constant="true" type="I12">
+                        <Value>
+                            <string>IP</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="277" Y="204"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I550" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>NET_CFG</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="145" Y="120"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I553" source="I545" target="I550" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I555" source="I550" target="I547" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="InferNETCFG_For_IP">
+                <Mapping image="I547" orig="I537"/>
+                <Mapping image="I545" orig="I540"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I557" kind="NAC" name="Nac">
+                        <Node ID="I558" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>NET_CFG</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="160" Y="95"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                    </Graph>
+                    <Morphism name="Nac">
+                        <Mapping image="I558" orig="I540"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I561" formula="true" name="InferNETCOMS_For_NETCFG">
+            <Graph ID="I563" kind="LHS" name="LeftOf_InferNETCOMS_For_NETCFG">
+                <Node ID="I564" type="I2">
+                    <NodeLayout X="172" Y="60"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I566" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>NET_CFG</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="147" Y="131"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I569" source="I564" target="I566" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I571" kind="RHS" name="RightOf_InferNETCOMS_For_NETCFG">
+                <Node ID="I572" type="I2">
+                    <NodeLayout X="173" Y="56"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I574" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>NET_CFG</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="100" Y="190"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I577" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>NET_COMS</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="284" Y="121"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I580" source="I572" target="I577" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I582" source="I577" target="I574" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="InferNETCOMS_For_NETCFG">
+                <Mapping image="I572" orig="I564"/>
+                <Mapping image="I574" orig="I566"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I584" kind="NAC" name="Nac">
+                        <Node ID="I585" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>NET_COMS</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="185" Y="47"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                    </Graph>
+                    <Morphism name="Nac">
+                        <Mapping image="I585" orig="I564"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I588" formula="true" name="FILE_WRITE_AsChild_OfNET_COMS">
+            <Graph ID="I590" kind="LHS" name="LeftOf_FILE_WRITE_AsChild_OfNET_COMS">
+                <Node ID="I591" type="I2">
+                    <NodeLayout X="187" Y="88"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I593" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>NET_COMS</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="81" Y="180"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I596" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_WRITE</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="329" Y="183"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I599" source="I591" target="I593" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I601" source="I591" target="I596" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I603" kind="RHS" name="RightOf_FILE_WRITE_AsChild_OfNET_COMS">
+                <Node ID="I604" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_WRITE</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="392" Y="293"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I607" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>NET_COMS</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="390" Y="191"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I610" type="I2">
+                    <NodeLayout X="192" Y="88"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I612" source="I610" target="I604" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I614" source="I607" target="I604" type="I14">
+                    <Attribute constant="true" type="I16">
+                        <Value>
+                            <float>0.5</float>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I617" source="I610" target="I607" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="FILE_WRITE_AsChild_OfNET_COMS">
+                <Mapping image="I604" orig="I596"/>
+                <Mapping image="I607" orig="I593"/>
+                <Mapping image="I610" orig="I591"/>
+                <Mapping image="I612" orig="I601"/>
+                <Mapping image="I617" orig="I599"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I619" kind="NAC" name="Nac">
+                        <Node ID="I620" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>FILE_WRITE</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="229" Y="238"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Node ID="I623" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>NET_COMS</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="227" Y="136"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Edge ID="I626" source="I623" target="I620" type="I14">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="Nac">
+                        <Mapping image="I623" orig="I593"/>
+                        <Mapping image="I620" orig="I596"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I628" formula="true" name="FILE_READ_AsChild_OfNET_COMS">
+            <Graph ID="I630" kind="LHS" name="LeftOf_FILE_READ_AsChild_OfNET_COMS">
+                <Node ID="I631" type="I2">
+                    <NodeLayout X="187" Y="88"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I633" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>NET_COMS</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="81" Y="180"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I636" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_READ</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="329" Y="183"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I639" source="I631" target="I633" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I641" source="I631" target="I636" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I643" kind="RHS" name="RightOf_FILE_READ_AsChild_OfNET_COMS">
+                <Node ID="I644" type="I2">
+                    <NodeLayout X="192" Y="88"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I646" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>NET_COMS</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="390" Y="191"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I649" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_READ</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="392" Y="293"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I652" source="I644" target="I646" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I654" source="I646" target="I649" type="I14">
+                    <Attribute constant="true" type="I16">
+                        <Value>
+                            <float>0.5</float>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I657" source="I644" target="I649" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="FILE_READ_AsChild_OfNET_COMS">
+                <Mapping image="I644" orig="I631"/>
+                <Mapping image="I646" orig="I633"/>
+                <Mapping image="I649" orig="I636"/>
+                <Mapping image="I657" orig="I641"/>
+                <Mapping image="I652" orig="I639"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I659" kind="NAC" name="Nac">
+                        <Node ID="I660" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>NET_COMS</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="108" Y="137"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Node ID="I663" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>FILE_READ</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="110" Y="239"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Edge ID="I666" source="I660" target="I663" type="I14">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="Nac">
+                        <Mapping image="I660" orig="I633"/>
+                        <Mapping image="I663" orig="I636"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I668" formula="true" name="FILE_READ_AsChild_OfCMD_EXEC">
+            <Graph ID="I670" kind="LHS" name="LeftOf_FILE_READ_AsChild_OfCMD_EXEC">
+                <Node ID="I671" type="I2">
+                    <NodeLayout X="187" Y="88"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I673" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>CMD_EXEC</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="81" Y="180"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I676" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_READ</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="329" Y="183"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I679" source="I671" target="I673" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I681" source="I671" target="I676" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I683" kind="RHS" name="RightOf_FILE_READ_AsChild_OfCMD_EXEC">
+                <Node ID="I684" type="I2">
+                    <NodeLayout X="192" Y="88"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I686" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>CMD_EXEC</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="155" Y="214"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I689" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_READ</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="363" Y="262"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I692" source="I684" target="I686" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I694" source="I686" target="I689" type="I14">
+                    <Attribute constant="true" type="I16">
+                        <Value>
+                            <float>0.5</float>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I697" source="I684" target="I689" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="FILE_READ_AsChild_OfCMD_EXEC">
+                <Mapping image="I684" orig="I671"/>
+                <Mapping image="I686" orig="I673"/>
+                <Mapping image="I689" orig="I676"/>
+                <Mapping image="I697" orig="I681"/>
+                <Mapping image="I692" orig="I679"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I699" kind="NAC" name="Nac">
+                        <Node ID="I700" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>CMD_EXEC</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="27" Y="162"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Node ID="I703" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>FILE_READ</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="235" Y="210"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Edge ID="I706" source="I700" target="I703" type="I14">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="Nac">
+                        <Mapping image="I703" orig="I676"/>
+                        <Mapping image="I700" orig="I673"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I708" formula="true" name="FILE_WRITE_AsChild_OfCMD_EXEC">
+            <Graph ID="I710" kind="LHS" name="LeftOf_FILE_WRITE_AsChild_OfCMD_EXEC">
+                <Node ID="I711" type="I2">
+                    <NodeLayout X="187" Y="88"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I713" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>CMD_EXEC</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="81" Y="180"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I716" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_WRITE</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="329" Y="183"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I719" source="I711" target="I713" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I721" source="I711" target="I716" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I723" kind="RHS" name="RightOf_FILE_WRITE_AsChild_OfCMD_EXEC">
+                <Node ID="I724" type="I2">
+                    <NodeLayout X="192" Y="88"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I726" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>CMD_EXEC</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="155" Y="214"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I729" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_WRITE</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="353" Y="264"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I732" source="I724" target="I726" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I734" source="I726" target="I729" type="I14">
+                    <Attribute constant="true" type="I16">
+                        <Value>
+                            <float>0.5</float>
+                        </Value>
+                    </Attribute>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I737" source="I724" target="I729" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="FILE_WRITE_AsChild_OfCMD_EXEC">
+                <Mapping image="I724" orig="I711"/>
+                <Mapping image="I726" orig="I713"/>
+                <Mapping image="I729" orig="I716"/>
+                <Mapping image="I732" orig="I719"/>
+                <Mapping image="I737" orig="I721"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I739" kind="NAC" name="Nac">
+                        <Node ID="I740" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>CMD_EXEC</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="63" Y="135"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Node ID="I743" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>FILE_WRITE</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="261" Y="185"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Edge ID="I746" source="I740" target="I743" type="I14">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="Nac">
+                        <Mapping image="I740" orig="I713"/>
+                        <Mapping image="I743" orig="I716"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I748" formula="true" name="CombineFiles">
+            <Graph ID="I750" kind="LHS" name="LeftOf_CombineFiles">
+                <Node ID="I751" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_WRITE</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="134" Y="144"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I754" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_READ</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="482" Y="146"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I757" type="I6">
+                    <NodeLayout X="308" Y="186"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I758" type="I6">
+                    <NodeLayout X="311" Y="244"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I759" source="I751" target="I757" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I761" source="I754" target="I757" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I763" source="I751" target="I758" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I765" source="I754" target="I758" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I767" kind="RHS" name="RightOf_CombineFiles">
+                <Node ID="I768" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_WRITE</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="134" Y="144"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I771" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_READ</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="482" Y="146"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I774" type="I6">
+                    <NodeLayout X="308" Y="186"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I775" source="I768" target="I774" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I777" source="I771" target="I774" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="CombineFiles">
+                <Mapping image="I768" orig="I751"/>
+                <Mapping image="I771" orig="I754"/>
+                <Mapping image="I774" orig="I757"/>
+                <Mapping image="I774" orig="I758"/>
+                <Mapping image="I775" orig="I759"/>
+                <Mapping image="I777" orig="I761"/>
+            </Morphism>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I779" formula="true" name="CombineIdenticNeighbours">
+            <Parameter name="A" type="String"/>
+            <Graph ID="I781" kind="LHS" name="LeftOf_CombineIdenticNeighbours">
+                <Node ID="I782" type="I2">
+                    <NodeLayout X="205" Y="46"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I784" type="I2">
+                    <Attribute type="I4" variable="true">
+                        <Value>
+                            <string>A</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="125" Y="117"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I787" type="I2">
+                    <Attribute type="I4" variable="true">
+                        <Value>
+                            <string>A</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="246" Y="132"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I790" source="I782" target="I787" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I792" source="I782" target="I784" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I794" kind="RHS" name="RightOf_CombineIdenticNeighbours">
+                <Node ID="I795" type="I2">
+                    <NodeLayout X="205" Y="46"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I797" type="I2">
+                    <Attribute type="I4" variable="true">
+                        <Value>
+                            <string>A</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="125" Y="117"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I800" source="I795" target="I797" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="CombineIdenticNeighbours">
+                <Mapping image="I795" orig="I782"/>
+                <Mapping image="I797" orig="I784"/>
+                <Mapping image="I797" orig="I787"/>
+                <Mapping image="I800" orig="I792"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I802" kind="NAC" name="Nac">
+                        <Node ID="I803" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>Process</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="85" Y="116"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                    </Graph>
+                    <Morphism name="Nac">
+                        <Mapping image="I803" orig="I784"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I806" formula="true" name="MetaScriptExec">
+            <Graph ID="I808" kind="LHS" name="LeftOf_MetaScriptExec">
+                <Node ID="I809" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>CMD_EXEC</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="244" Y="45"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I812" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_READ</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="138" Y="122"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I815" type="I6">
+                    <NodeLayout X="50" Y="211"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I816" source="I809" target="I812" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I818" source="I812" target="I815" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I820" kind="RHS" name="RightOf_MetaScriptExec">
+                <Node ID="I821" type="I6">
+                    <NodeLayout X="50" Y="211"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I822" type="I7">
+                    <Attribute constant="true" type="I9">
+                        <Value>
+                            <string>Script Execution</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="344" Y="65"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I825" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>CMD_EXEC</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="167" Y="50"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I828" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_READ</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="61" Y="124"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I831" source="I821" target="I822" type="I17">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I832" source="I825" target="I828" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I834" source="I822" target="I825" type="I19">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I835" source="I828" target="I821" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="MetaScriptExec">
+                <Mapping image="I821" orig="I815"/>
+                <Mapping image="I825" orig="I809"/>
+                <Mapping image="I828" orig="I812"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I837" kind="NAC" name="Nac">
+                        <Node ID="I838" type="I7">
+                            <Attribute constant="true" type="I9">
+                                <Value>
+                                    <string>Script Execution</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="234" Y="112"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Node ID="I841" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>CMD_EXEC</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="57" Y="97"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Edge ID="I844" source="I838" target="I841" type="I19">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="Nac">
+                        <Mapping image="I841" orig="I809"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I845" formula="true" name="MetaFileDownload">
+            <Graph ID="I847" kind="LHS" name="LeftOf_MetaFileDownload">
+                <Node ID="I848" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>NET_COMS</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="90" Y="99"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I851" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_WRITE</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="270" Y="165"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I854" type="I6">
+                    <NodeLayout X="406" Y="272"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I855" source="I848" target="I851" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I857" source="I851" target="I854" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I859" kind="RHS" name="RightOf_MetaFileDownload">
+                <Node ID="I860" type="I6">
+                    <NodeLayout X="360" Y="221"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I861" type="I7">
+                    <Attribute constant="true" type="I9">
+                        <Value>
+                            <string>File_Download</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="252" Y="86"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I864" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_WRITE</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="152" Y="190"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I867" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>NET_COMS</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="55" Y="88"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I870" source="I861" target="I860" type="I17">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I871" source="I867" target="I864" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I873" source="I864" target="I860" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I875" source="I861" target="I867" type="I19">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="MetaFileDownload">
+                <Mapping image="I860" orig="I854"/>
+                <Mapping image="I864" orig="I851"/>
+                <Mapping image="I867" orig="I848"/>
+                <Mapping image="I871" orig="I855"/>
+                <Mapping image="I873" orig="I857"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I876" kind="NAC" name="Nac">
+                        <Node ID="I877" type="I7">
+                            <Attribute constant="true" type="I9">
+                                <Value>
+                                    <string>File_Download</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="144" Y="100"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Node ID="I880" type="I6">
+                            <NodeLayout X="191" Y="262"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Edge ID="I881" source="I877" target="I880" type="I17">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="Nac">
+                        <Mapping image="I880" orig="I854"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I882" formula="true" name="MetaFileUpload">
+            <Graph ID="I884" kind="LHS" name="LeftOf_MetaFileUpload">
+                <Node ID="I885" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>NET_COMS</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="90" Y="99"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I888" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_READ</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="270" Y="164"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I891" type="I6">
+                    <NodeLayout X="415" Y="285"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I892" source="I885" target="I888" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I894" source="I888" target="I891" type="I14">
+                    <EdgeLayout bendX="333" bendY="213" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I896" kind="RHS" name="RightOf_MetaFileUpload">
+                <Node ID="I897" type="I6">
+                    <NodeLayout X="360" Y="221"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I898" type="I7">
+                    <Attribute constant="true" type="I9">
+                        <Value>
+                            <string>File_Upload</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="252" Y="85"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I901" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_READ</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="151" Y="190"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I904" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>NET_COMS</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="45" Y="125"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I907" source="I904" target="I901" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I909" source="I901" target="I897" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I911" source="I898" target="I904" type="I19">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I912" source="I897" target="I898" type="I17">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="MetaFileUpload">
+                <Mapping image="I897" orig="I891"/>
+                <Mapping image="I901" orig="I888"/>
+                <Mapping image="I904" orig="I885"/>
+                <Mapping image="I907" orig="I892"/>
+                <Mapping image="I909" orig="I894"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I913" kind="NAC" name="Nac">
+                        <Node ID="I914" type="I7">
+                            <Attribute constant="true" type="I9">
+                                <Value>
+                                    <string>File_Upload</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="240" Y="47"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Node ID="I917" type="I6">
+                            <NodeLayout X="191" Y="262"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Edge ID="I918" source="I917" target="I914" type="I17">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="Nac">
+                        <Mapping image="I917" orig="I891"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I919" formula="true" name="MetaSysRecon">
+            <Graph ID="I921" kind="LHS" name="LeftOf_MetaSysRecon">
+                <Node ID="I922" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>SYS_INFO</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="142" Y="59"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I925" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_WRITE</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="171" Y="178"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I928" type="I6">
+                    <NodeLayout X="246" Y="277"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I929" source="I922" target="I925" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I931" source="I925" target="I928" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I933" kind="RHS" name="RightOf_MetaSysRecon">
+                <Node ID="I934" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>SYS_INFO</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="160" Y="110"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I937" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_WRITE</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="171" Y="178"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I940" type="I6">
+                    <NodeLayout X="217" Y="243"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I941" type="I7">
+                    <Attribute constant="true" type="I9">
+                        <Value>
+                            <string>Sys Recon</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="426" Y="137"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I944" source="I934" target="I937" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I946" source="I937" target="I940" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I948" source="I941" target="I934" type="I19">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I949" source="I941" target="I940" type="I17">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="MetaSysRecon">
+                <Mapping image="I934" orig="I922"/>
+                <Mapping image="I937" orig="I925"/>
+                <Mapping image="I940" orig="I928"/>
+                <Mapping image="I944" orig="I929"/>
+                <Mapping image="I946" orig="I931"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I950" kind="NAC" name="Nac">
+                        <Node ID="I951" type="I7">
+                            <Attribute constant="true" type="I9">
+                                <Value>
+                                    <string>Sys Recon</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="234" Y="125"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Node ID="I954" type="I6">
+                            <NodeLayout X="25" Y="231"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Node ID="I955" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>SYS_INFO</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="94" Y="80"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Edge ID="I958" source="I951" target="I954" type="I17">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                        <Edge ID="I959" source="I951" target="I955" type="I19">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="Nac">
+                        <Mapping image="I954" orig="I928"/>
+                        <Mapping image="I955" orig="I922"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I960" formula="true" name="MetaFSRecon">
+            <Graph ID="I962" kind="LHS" name="LeftOf_MetaFSRecon">
+                <Node ID="I963" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FS_INFO</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="157" Y="110"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I966" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_WRITE</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="171" Y="178"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I969" type="I6">
+                    <NodeLayout X="217" Y="243"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I970" source="I963" target="I966" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I972" source="I966" target="I969" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I974" kind="RHS" name="RightOf_MetaFSRecon">
+                <Node ID="I975" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FS_INFO</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="160" Y="110"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I978" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_WRITE</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="171" Y="178"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I981" type="I6">
+                    <NodeLayout X="217" Y="243"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I982" type="I7">
+                    <Attribute constant="true" type="I9">
+                        <Value>
+                            <string>FS Recon</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="426" Y="137"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I985" source="I975" target="I978" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I987" source="I978" target="I981" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I989" source="I982" target="I975" type="I19">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I990" source="I982" target="I981" type="I17">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="MetaFSRecon">
+                <Mapping image="I975" orig="I963"/>
+                <Mapping image="I978" orig="I966"/>
+                <Mapping image="I981" orig="I969"/>
+                <Mapping image="I985" orig="I970"/>
+                <Mapping image="I987" orig="I972"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I991" kind="NAC" name="Nac">
+                        <Node ID="I992" type="I7">
+                            <Attribute constant="true" type="I9">
+                                <Value>
+                                    <string>FS Recon</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="234" Y="125"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Node ID="I995" type="I6">
+                            <NodeLayout X="25" Y="231"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Node ID="I996" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>FS_INFO</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="54" Y="70"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Edge ID="I999" source="I992" target="I995" type="I17">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                        <Edge ID="I1000" source="I992" target="I996" type="I19">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="Nac">
+                        <Mapping image="I995" orig="I969"/>
+                        <Mapping image="I996" orig="I963"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I1001" formula="true" name="MetaNetRecon">
+            <Graph ID="I1003" kind="LHS" name="LeftOf_MetaNetRecon">
+                <Node ID="I1004" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>NET_INFO</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="159" Y="110"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1007" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_WRITE</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="171" Y="178"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1010" type="I6">
+                    <NodeLayout X="217" Y="243"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I1011" source="I1004" target="I1007" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I1013" source="I1007" target="I1010" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I1015" kind="RHS" name="RightOf_MetaNetRecon">
+                <Node ID="I1016" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>NET_INFO</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="160" Y="110"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1019" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_WRITE</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="171" Y="178"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1022" type="I6">
+                    <NodeLayout X="217" Y="243"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1023" type="I7">
+                    <Attribute constant="true" type="I9">
+                        <Value>
+                            <string>Net Recon</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="426" Y="137"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I1026" source="I1016" target="I1019" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I1028" source="I1019" target="I1022" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I1030" source="I1023" target="I1016" type="I19">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I1031" source="I1023" target="I1022" type="I17">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="MetaNetRecon">
+                <Mapping image="I1016" orig="I1004"/>
+                <Mapping image="I1019" orig="I1007"/>
+                <Mapping image="I1022" orig="I1010"/>
+                <Mapping image="I1028" orig="I1013"/>
+                <Mapping image="I1026" orig="I1011"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I1032" kind="NAC" name="Nac">
+                        <Node ID="I1033" type="I7">
+                            <Attribute constant="true" type="I9">
+                                <Value>
+                                    <string>Net Recon</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="234" Y="125"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Node ID="I1036" type="I6">
+                            <NodeLayout X="25" Y="231"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Node ID="I1037" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>NET_INFO</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="68" Y="62"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Edge ID="I1040" source="I1033" target="I1036" type="I17">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                        <Edge ID="I1041" source="I1033" target="I1037" type="I19">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="Nac">
+                        <Mapping image="I1036" orig="I1010"/>
+                        <Mapping image="I1037" orig="I1004"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I1042" formula="true" name="MetaProcessExecution">
+            <Graph ID="I1044" kind="LHS" name="LeftOf_MetaProcessExecution">
+                <Node ID="I1045" type="I6">
+                    <NodeLayout X="160" Y="297"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1046" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>Process</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="411" Y="189"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I1049" source="I1046" target="I1045" type="I18">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I1050" kind="RHS" name="RightOf_MetaProcessExecution">
+                <Node ID="I1051" type="I6">
+                    <NodeLayout X="160" Y="297"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1052" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>Process</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="411" Y="189"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1055" type="I7">
+                    <Attribute constant="true" type="I9">
+                        <Value>
+                            <string>Process Execution</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="398" Y="297"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I1058" source="I1052" target="I1051" type="I18">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I1059" source="I1051" target="I1055" type="I17">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I1060" source="I1055" target="I1052" type="I19">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="MetaProcessExecution">
+                <Mapping image="I1051" orig="I1045"/>
+                <Mapping image="I1052" orig="I1046"/>
+                <Mapping image="I1058" orig="I1049"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I1061" kind="NAC" name="Nac">
+                        <Node ID="I1062" type="I6">
+                            <NodeLayout X="160" Y="297"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Node ID="I1063" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>Process</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="411" Y="189"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Node ID="I1066" type="I7">
+                            <NodeLayout X="398" Y="297"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Edge ID="I1068" source="I1063" target="I1062" type="I18">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                        <Edge ID="I1069" source="I1062" target="I1066" type="I17">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                        <Edge ID="I1070" source="I1066" target="I1063" type="I19">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="Nac">
+                        <Mapping image="I1062" orig="I1045"/>
+                        <Mapping image="I1063" orig="I1046"/>
+                        <Mapping image="I1068" orig="I1049"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I1071" formula="true" name="MetaScriptExecToGenericExec">
+            <Graph ID="I1073" kind="LHS" name="LeftOf_MetaScriptExecToGenericExec">
+                <Node ID="I1074" type="I6">
+                    <NodeLayout X="98" Y="288"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1075" type="I7">
+                    <Attribute constant="true" type="I9">
+                        <Value>
+                            <string>Script Execution</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="409" Y="189"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1078" type="I2">
+                    <NodeLayout X="172" Y="113"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I1080" source="I1074" target="I1075" type="I17">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I1081" source="I1075" target="I1078" type="I19">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I1082" kind="RHS" name="RightOf_MetaScriptExecToGenericExec">
+                <Node ID="I1083" type="I6">
+                    <NodeLayout X="98" Y="288"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1084" type="I7">
+                    <Attribute constant="true" type="I9">
+                        <Value>
+                            <string>Generic Execution</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="409" Y="189"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1087" type="I2">
+                    <NodeLayout X="172" Y="113"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I1089" source="I1083" target="I1084" type="I17">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I1090" source="I1084" target="I1087" type="I19">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="MetaScriptExecToGenericExec">
+                <Mapping image="I1083" orig="I1074"/>
+                <Mapping image="I1084" orig="I1075"/>
+                <Mapping image="I1087" orig="I1078"/>
+                <Mapping image="I1090" orig="I1081"/>
+                <Mapping image="I1089" orig="I1080"/>
+            </Morphism>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I1091" formula="true" name="MetaProcessExecToGenericExec">
+            <Graph ID="I1093" kind="LHS" name="LeftOf_MetaProcessExecToGenericExec">
+                <Node ID="I1094" type="I6">
+                    <NodeLayout X="98" Y="288"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1095" type="I7">
+                    <Attribute constant="true" type="I9">
+                        <Value>
+                            <string>Process Execution</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="409" Y="189"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1098" type="I2">
+                    <NodeLayout X="172" Y="113"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I1100" source="I1094" target="I1095" type="I17">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I1101" source="I1095" target="I1098" type="I19">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I1102" kind="RHS" name="RightOf_MetaProcessExecToGenericExec">
+                <Node ID="I1103" type="I6">
+                    <NodeLayout X="98" Y="288"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1104" type="I7">
+                    <Attribute constant="true" type="I9">
+                        <Value>
+                            <string>Generic Execution</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="409" Y="189"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1107" type="I2">
+                    <NodeLayout X="172" Y="113"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I1109" source="I1103" target="I1104" type="I17">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I1110" source="I1104" target="I1107" type="I19">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="MetaProcessExecToGenericExec">
+                <Mapping image="I1103" orig="I1094"/>
+                <Mapping image="I1104" orig="I1095"/>
+                <Mapping image="I1107" orig="I1098"/>
+                <Mapping image="I1110" orig="I1101"/>
+                <Mapping image="I1109" orig="I1100"/>
+            </Morphism>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I1111" formula="true" name="MetaCombineGenericExec">
+            <Graph ID="I1113" kind="LHS" name="LeftOf_MetaCombineGenericExec">
+                <Node ID="I1114" type="I6">
+                    <NodeLayout X="357" Y="298"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1115" type="I7">
+                    <Attribute constant="true" type="I9">
+                        <Value>
+                            <string>Generic Execution</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="423" Y="178"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1118" type="I2">
+                    <NodeLayout X="186" Y="102"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1120" type="I7">
+                    <Attribute constant="true" type="I9">
+                        <Value>
+                            <string>Generic Execution</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="670" Y="172"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1123" type="I2">
+                    <NodeLayout X="550" Y="57"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I1125" source="I1114" target="I1115" type="I17">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I1126" source="I1115" target="I1118" type="I19">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I1127" source="I1120" target="I1123" type="I19">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I1128" source="I1114" target="I1120" type="I17">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I1129" kind="RHS" name="RightOf_MetaCombineGenericExec">
+                <Node ID="I1130" type="I6">
+                    <NodeLayout X="357" Y="298"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1131" type="I2">
+                    <NodeLayout X="186" Y="102"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1133" type="I7">
+                    <Attribute constant="true" type="I9">
+                        <Value>
+                            <string>Generic Execution</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="670" Y="172"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1136" type="I2">
+                    <NodeLayout X="550" Y="57"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I1138" source="I1133" target="I1136" type="I19">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I1139" source="I1130" target="I1133" type="I17">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I1140" source="I1133" target="I1131" type="I19">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism comment="Formula: true" name="MetaCombineGenericExec">
+                <Mapping image="I1130" orig="I1114"/>
+                <Mapping image="I1131" orig="I1118"/>
+                <Mapping image="I1133" orig="I1120"/>
+                <Mapping image="I1136" orig="I1123"/>
+                <Mapping image="I1133" orig="I1115"/>
+                <Mapping image="I1138" orig="I1127"/>
+                <Mapping image="I1140" orig="I1126"/>
+                <Mapping image="I1139" orig="I1128"/>
+            </Morphism>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I1141" formula="true" name="IsolateLonelyFileWrite">
+            <Graph ID="I1143" kind="LHS" name="LeftOf_IsolateLonelyFileWrite">
+                <Node ID="I1144" type="I2">
+                    <NodeLayout X="315" Y="90"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1146" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_WRITE</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="323" Y="159"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I1149" source="I1144" target="I1146" type="I14">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I1151" kind="RHS" name="RightOf_IsolateLonelyFileWrite">
+                <Node ID="I1152" type="I2">
+                    <NodeLayout X="315" Y="90"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1154" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_WRITE</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="323" Y="159"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+            </Graph>
+            <Morphism comment="Formula: true" name="IsolateLonelyFileWrite">
+                <Mapping image="I1152" orig="I1144"/>
+                <Mapping image="I1154" orig="I1146"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I1157" kind="NAC" name="Nac">
+                        <Node ID="I1158" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>FILE_WRITE</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="142" Y="101"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Node ID="I1161" type="I6">
+                            <NodeLayout X="151" Y="163"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Edge ID="I1162" source="I1158" target="I1161" type="I14">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="Nac">
+                        <Mapping image="I1158" orig="I1146"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I1164" formula="true" name="IsolateLonelyFileRead">
+            <Graph ID="I1166" kind="LHS" name="LeftOf_IsolateLonelyFileRead">
+                <Node ID="I1167" type="I2">
+                    <NodeLayout X="252" Y="106"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1169" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_READ</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="270" Y="174"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Edge ID="I1172" source="I1167" target="I1169" type="I14">
+                    <EdgeLayout bendX="261" bendY="136" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Graph ID="I1174" kind="RHS" name="RightOf_IsolateLonelyFileRead">
+                <Node ID="I1175" type="I2">
+                    <NodeLayout X="252" Y="106"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+                <Node ID="I1177" type="I2">
+                    <Attribute constant="true" type="I4">
+                        <Value>
+                            <string>FILE_READ</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="270" Y="174"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+            </Graph>
+            <Morphism comment="Formula: true" name="IsolateLonelyFileRead">
+                <Mapping image="I1175" orig="I1167"/>
+                <Mapping image="I1177" orig="I1169"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I1180" kind="NAC" name="Nac">
+                        <Node ID="I1181" type="I2">
+                            <Attribute constant="true" type="I4">
+                                <Value>
+                                    <string>FILE_READ</string>
+                                </Value>
+                            </Attribute>
+                            <NodeLayout X="189" Y="133"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Node ID="I1184" type="I6">
+                            <NodeLayout X="175" Y="228"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Edge ID="I1185" source="I1181" target="I1184" type="I14">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="Nac">
+                        <Mapping image="I1181" orig="I1169"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I1187" formula="true" name="RemoveAllAlone">
+            <Graph ID="I1189" kind="LHS" name="LeftOf_RemoveAllAlone">
+                <Node ID="I1190" type="I2">
+                    <NodeLayout X="437" Y="140"/>
+                    <additionalLayout age="0" force="10" frozen="true" zone="50"/>
+                </Node>
+            </Graph>
+            <Graph ID="I1192" kind="RHS" name="RightOf_RemoveAllAlone"/>
+            <Morphism comment="Formula: true" name="RemoveAllAlone"/>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I1193" kind="NAC" name="Nac">
+                        <Node ID="I1194" type="I2">
+                            <NodeLayout X="60" Y="184"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Node ID="I1196" type="I2">
+                            <NodeLayout X="115" Y="77"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Edge ID="I1198" source="I1196" target="I1194" type="I14">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="Nac">
+                        <Mapping image="I1194" orig="I1190"/>
+                    </Morphism>
+                </NAC>
+                <NAC>
+                    <Graph ID="I1200" kind="NAC" name="Nac1">
+                        <Node ID="I1201" type="I2">
+                            <NodeLayout X="129" Y="89"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Node ID="I1203" type="I2">
+                            <NodeLayout X="125" Y="180"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="true" zone="50"/>
+                        </Node>
+                        <Edge ID="I1205" source="I1201" target="I1203" type="I14">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="Nac1">
+                        <Mapping image="I1201" orig="I1190"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <RuleSequences>
+            <Sequence name="RuleSequence">
+                <Graph id="I20"/>
+                <Subsequence iterations="10">
+                    <Item iterations="1" rule="Neutral0"/>
+                    <Item iterations="1" rule="Neutral1"/>
+                    <Item iterations="1" rule="CopySimplifier"/>
+                </Subsequence>
+                <Subsequence iterations="5">
+                    <Item iterations="1" rule="InferNETCFG_For_RFILE"/>
+                    <Item iterations="1" rule="InferNETCOMS_For_NETCFG"/>
+                    <Item iterations="1" rule="InferNETCFG_For_URL"/>
+                    <Item iterations="1" rule="InferNETCFG_For_IP"/>
+                    <Item iterations="1" rule="FILE_WRITE_AsChild_OfNET_COMS"/>
+                    <Item iterations="1" rule="FILE_READ_AsChild_OfNET_COMS"/>
+                    <Item iterations="1" rule="FILE_WRITE_AsChild_OfCMD_EXEC"/>
+                    <Item iterations="1" rule="FILE_READ_AsChild_OfCMD_EXEC"/>
+                    <Item iterations="1" rule="CombineFiles"/>
+                    <Item iterations="1" rule="CombineIdenticNeighbours"/>
+                </Subsequence>
+                <Subsequence iterations="20">
+                    <Item iterations="1" rule="MetaFileDownload"/>
+                    <Item iterations="1" rule="MetaScriptExec"/>
+                    <Item iterations="1" rule="MetaFileUpload"/>
+                    <Item iterations="1" rule="MetaSysRecon"/>
+                    <Item iterations="1" rule="MetaFSRecon"/>
+                    <Item iterations="1" rule="MetaNetRecon"/>
+                    <Item iterations="1" rule="MetaProcessExecution"/>
+                </Subsequence>
+                <Subsequence iterations="10">
+                    <Item iterations="1" rule="MetaScriptExecToGenericExec"/>
+                    <Item iterations="1" rule="MetaProcessExecToGenericExec"/>
+                    <Item iterations="1" rule="MetaCombineGenericExec"/>
+                </Subsequence>
+                <Subsequence iterations="50">
+                    <Item iterations="1" rule="RemoveAllAlone"/>
+                </Subsequence>
+            </Sequence>
+        </RuleSequences>
+    </GraphTransformationSystem>
+</Document>
